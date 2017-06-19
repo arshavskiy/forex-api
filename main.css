@@ -1,11 +1,17 @@
+root {
+    --main-bg-color: lightgrey;
+}
+
 body {
     overflow-x: hidden;
+    background-color: var(--main-bg-color, lightgrey);
 }
 
 .table {
     margin: 0;
     padding: 0;
     border: 1px solid darkgray;
+    background: white;
     border-radius: 5px;
     /*border: 1px solid black;*/
 }
@@ -47,6 +53,7 @@ body {
 
 .greetings {
     text-align: center;
+    width: 100%;
 }
 
 #main-table {
