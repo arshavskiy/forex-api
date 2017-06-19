@@ -9,7 +9,6 @@ function getForex(value, corrency) {
 }
 
 function getCorency() {
-
     var url = 'https://forex.1forge.com/1.0.1/quotes?pairs=EURUSD,GBPJPY,AUDUSD';
     $.ajax({
         url: url,
@@ -28,7 +27,6 @@ function getTime(time) {
 
 function buildTable(tableName, d) {
     var price = d.price.toFixed(3);
-
     $(`#${tableName}`).text(d.symbol);
     $(`#time-${tableName}`).text(getTime(d.timestamp));
     $(`#price-${tableName}`).text(price).css("font-weight", "600");
@@ -52,7 +50,6 @@ $('#form-submit').click(function (e) {
 });
 
 function showError() {
-
     $('<strong>', {
         text: "Please enter the corrent value",
     }).appendTo('#error').fadeIn().delay(2000).fadeOut();
