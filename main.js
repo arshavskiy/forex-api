@@ -13,7 +13,6 @@ function getCorency() {
     $.ajax({
         url: url,
     }).done(function (data) {
-        console.log(data);
         for (var i = 0; i < data.length; i++) {
             buildTable(data[i].symbol, data[i]);
         }
