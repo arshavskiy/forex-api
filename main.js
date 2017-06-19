@@ -20,17 +20,20 @@ function getCorency() {
     });
 };
 
-function buildTable(tableName, d) {
-    $(`#${tableName}`).text(d.symbol);
-    $(`#time-${tableName}`).text(getTime(d.timestamp));
-    $(`#price-${tableName}`).text(d.price).css("font-weight", "600");
-    $(`#symbol-${tableName}`).text(d.symbol);
-}
-
 function getTime(time) {
     var d = new Date(time * 1000);
     return "0" + d.getHours() + '\"' + d.getMinutes() + '\"' + d.getSeconds();
 }
+
+function buildTable(tableName, d) {
+    var price = d.price.toFixed(3);
+
+    $(`#${tableName}`).text(d.symbol);
+    $(`#time-${tableName}`).text(getTime(d.timestamp));
+    $(`#price-${tableName}`).text(price).css("font-weight", "600");
+    $(`#symbol-${tableName}`).text(d.symbol);
+}
+
 
 $('#form-submit').click(function (e) {
     e.preventDefault();
@@ -40,7 +43,6 @@ $('#form-submit').click(function (e) {
 
     $.get(getForex(value, corrency), function (data) {
         if (data.error) {
-            console.log(data.error);
             showError();
         }
 
@@ -61,23 +63,3 @@ function showError() {
         text: "Please enter the corrent value",
     }).appendTo('#error').fadeIn().delay(2000).fadeOut();
 }
-
-
-// if click
-
-
-
-// $('#EURUSD').text(data[0].symbol);
-// $('#time-EURUSD').text(data[0].timestamp);
-// $('#price-EURUSD').text(data[0].price);
-// $('#symbol-EURUSD').text(data[0].symbol);
-
-// $('#AUDUSD').text(data[0].symbol);
-// $('#time-AUDUSD').text(data[0].timestamp);
-// $('#price-AUDUSD').text(data[0].price);
-// $('#symbol-AUDUSD').text(data[0].symbol);
-
-// $('#GBPJPY').text(data[2].symbol);
-// $('#time-GBPJPY').text(data[2].timestamp);
-// $('#price-GBPJPY').text(data[2].price);
-// $('#symbol-GBPJPY').text(data[2].symbol);

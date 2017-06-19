@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .table {
     margin: 0;
     padding: 0;
@@ -16,8 +20,9 @@
 }
 
 #now-submit {
-    margin: 0 45%;
+    margin: 0 calc(50% - 50px);
     margin-bottom: 2rem;
+    /*width: 103px;*/
 }
 
 .input-group {
@@ -50,6 +55,7 @@
 
 h3 {
     margin-right: 10px;
+    padding-top: 5px;
 }
 
 .jum-info {

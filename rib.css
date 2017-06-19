@@ -1,0 +1,38 @@
+#AUDUSD::before {
+    position: absolute;
+    overflow: hidden;
+    content: "AUDUSD";
+    transform: rotate(51deg);
+    color: white;
+    background: black;
+    right: -18px;
+    top: 24px;
+    width: 120px;
+    text-align: center;
+}
+
+#EURUSD::before {
+    position: absolute;
+    overflow: hidden;
+    content: "EURUSD";
+    transform: rotate(51deg);
+    color: white;
+    background: black;
+    right: -18px;
+    top: 24px;
+    width: 120px;
+    text-align: center;
+}
+
+#GBPJPY::before {
+    position: absolute;
+    overflow: hidden;
+    content: "GBPJPY";
+    transform: rotate(51deg);
+    color: white;
+    background: black;
+    right: -18px;
+    top: 24px;
+    width: 120px;
+    text-align: center;
+}
