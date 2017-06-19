@@ -1,0 +1,65 @@
+.table {
+    margin: 0;
+    padding: 0;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    /*border: 1px solid black;*/
+}
+
+.menu {
+    margin-top: 4rem;
+}
+
+#form-submit {
+    width: 60%;
+    margin: 0 20%;
+}
+
+#now-submit {
+    margin: 0 45%;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+}
+
+.jumbotron-fluid {
+    width: 40%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 0;
+}
+
+#r1 {
+    margin-top: 2rem;
+    width: 50%;
+    flex-grow: 1;
+    font-weight: 600;
+}
+
+.greetings {
+    text-align: center;
+}
+
+#main-table {
+    display: none;
+}
+
+h3 {
+    margin-right: 10px;
+}
+
+.jum-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+#error {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    font-weight: 600;
+}

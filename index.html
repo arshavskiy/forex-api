@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="fav.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Forex For You</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="container">
+            <div class="col-sm-12">
+                <h1 class="greetings text-center">Forex For You!</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <!--<div class="container">-->
+        <!--<div class="col-sm-2 col-sm-offset-5">-->
+        <button type="submit" class="btn btn-primary text-center" id="now-submit">Convert Now</button>
+        <!--</div>-->
+    </div>
+
+
+    <div class="row" id="main-table">
+        <div class="container">
+
+
+            <div class="col-sm-4">
+                <table class="table" id="table-AUDUSD">
+                    <tr>
+                        <th><span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                        </th>
+                        <th id="AUDUSD"></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Time</td>
+                        <td id="time-AUDUSD">50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Price</td>
+                        <td id="price-AUDUSD">94</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Symbol</td>
+                        <td id="symbol-AUDUSD">80</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-sm-4">
+                <table class="table" id="table-EURUSD">
+                    <tr>
+                        <th><span class="glyphicon glyphicon-th" aria-hidden="true"></th>
+                        <th id="EURUSD"></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Time</td>
+                        <td id="time-EURUSD">50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Price</td>
+                        <td id="price-EURUSD">94</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Symbol</td>
+                        <td id="symbol-EURUSD">80</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-sm-4">
+                <table class="table" id="table-GBPJPY">
+                    <tr>
+                        <th><span class="glyphicon glyphicon-th" aria-hidden="true"></th>
+                        <th id="GBPJPY"></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Time</td>
+                        <td id="time-GBPJPY">50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Price</td>
+                        <td id="price-GBPJPY">94</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Symbol</td>
+                        <td id="symbol-GBPJPY">80</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row menu">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="jum-info">
+                <h4 class="display">Enter quantity</h4>
+                <h4 class="display">Select Forex</h4>
+            </div>
+            <div class="container">
+                <form class="form">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="f1" placeholder="123">
+                            <select class="form-control" id="f2">
+                                <option value="GBP">GBP</option>
+                                <option value="EUR">EUR</option>
+                                <option value="JPY">JPY</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="form-submit">Convert</button>
+                    <span id="error"></span>
+
+                            </form>
+                            <form class="form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <h3>Result: </h3>
+                                        <input type="text" class="form-control pull-right" id="r1" placeholder="result">
+
+                                    </div>
+                                </div>
+                            </form>
+
+            </div>
+
+            <script src="main.js">
+            </script>
+</body>
+
+</html>
