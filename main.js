@@ -50,11 +50,12 @@ $('#form-submit').click(function (e) {
 });
 
 $('#now-submit').click(function () {
-    $('#main-table').toggle(300);
-    getCorency();
-    var myVar = setInterval(getCorency, 10000);
+    $('.jumbotron').toggle(200);
 })
 
+
+getCorency();
+var myVar = setInterval(getCorency, 10000);
 
 function showError() {
 
