@@ -45,9 +45,16 @@ $('#form-submit').click(function (e) {
             showError();
         }
 
-        $('#r1').val(data.value);
+        $('#r1').val((data.value).toFixed(2));
     });
 });
+
+function showError() {
+
+    $('<strong>', {
+        text: "Please enter the corrent value",
+    }).appendTo('#error').fadeIn().delay(2000).fadeOut();
+}
 
 $('#now-submit').click(function () {
     $('.jumbotron').toggle(200);
@@ -56,10 +63,3 @@ $('#now-submit').click(function () {
 
 getCorency();
 var myVar = setInterval(getCorency, 10000);
-
-function showError() {
-
-    $('<strong>', {
-        text: "Please enter the corrent value",
-    }).appendTo('#error').fadeIn().delay(2000).fadeOut();
-}
