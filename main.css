@@ -11,7 +11,7 @@ body {
 }
 
 .menu {
-    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 
 #form-submit {
@@ -20,9 +20,9 @@ body {
 }
 
 #now-submit {
-    margin: 0 calc(50% - 50px);
+    margin: 0 calc(50% - 58px);
     margin-bottom: 2rem;
-    /*width: 103px;*/
+    margin-top: 1rem;
 }
 
 .input-group {
