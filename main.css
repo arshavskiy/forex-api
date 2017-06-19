@@ -1,10 +1,10 @@
 root {
-    --main-bg-color: lightgrey;
+    --main-bg-color: rgba(55, 55, 55, 0.7);
 }
 
 body {
     overflow-x: hidden;
-    background-color: var(--main-bg-color, lightgrey);
+    background-color: var(--main-bg-color, rgba(55, 55, 55, 0.7));
 }
 
 .table {
@@ -45,6 +45,7 @@ body {
 .greetings {
     text-align: center;
     width: 100%;
+    color: white;
 }
 
 .jumbotron {
