@@ -9,10 +9,12 @@ function getForex(value, corrency) {
 }
 
 function getCorency() {
+
     var url = 'https://forex.1forge.com/1.0.1/quotes?pairs=EURUSD,GBPJPY,AUDUSD';
     $.ajax({
         url: url,
     }).done(function (data) {
+        $('#main-table').show(300);
         for (var i = 0; i < data.length; i++) {
             buildTable(data[i].symbol, data[i]);
         }
@@ -60,6 +62,8 @@ $('#now-submit').click(function () {
     $('.jumbotron').toggle(200);
 })
 
-
-getCorency();
-var myVar = setInterval(getCorency, 10000);
+var init = (function () {
+    $('#main-table').hide();
+    getCorency();
+    var myVar = setInterval(getCorency, 10000);
+})();
