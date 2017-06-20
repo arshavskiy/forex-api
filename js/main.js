@@ -74,13 +74,13 @@ var init = (function () {
 })();
 
 function loader() {
-    $('#loader-container').prependTo('body');
-    $('<div>', {
-        class: 'loader',
-        id: 'loader-2',
-        html: $('<span>'),
-    }).appendTo('#loader-container');
+    $('#loader-container', {
+        html: $('<div>', {
+            class: 'loader',
+            id: 'loader-2',
+            html: $('<span>'),
+        }).appendTo('#loader-container'),
+    }).prependTo('body');
     $('<span>').appendTo('#loader-2');
     $('<span>').appendTo('#loader-2');
-
 };
