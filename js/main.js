@@ -34,7 +34,7 @@ function done() {
 
 function getTime(time) {
     var d = new Date(time * 1000);
-    return d.getHours() + '\:' + d.getMinutes() + '\:' + d.getSeconds();
+    return d.getHours() + '\"' + d.getMinutes() + '\":"' + d.getSeconds();
 }
 
 function buildTable(tableName, d) {
