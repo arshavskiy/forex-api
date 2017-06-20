@@ -74,6 +74,7 @@ var init = (function () {
 })();
 
 function loader() {
+    $('#loader-container').prependTo('body');
     $('<div>', {
         class: 'loader',
         id: 'loader-2',
