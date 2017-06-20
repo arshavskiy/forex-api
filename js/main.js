@@ -1,11 +1,15 @@
 function getForex(value, corrency) {
     var url = "https://forex.1forge.com/1.0.1/convert";
     url += '?' + $.param({
-        'from': 'USD',
-        'to': corrency,
+        'from': correncyVld(corrency)[0],
+        'to': correncyVld(corrency)[1],
         'quantity': value
     });
     return url;
+}
+
+function correncyVld(val) {
+    return val.split("/");
 }
 
 function getCorency() {
