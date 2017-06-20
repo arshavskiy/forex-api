@@ -87,8 +87,9 @@ h3 {
 }
 
 #error {
-    display: flex;
-    justify-content: center;
+    position: absolute;
+    /*display: flex;
+    justify-content: center;*/
     padding-top: 0.5rem;
     font-weight: 600;
 }

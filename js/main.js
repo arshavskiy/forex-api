@@ -34,7 +34,7 @@ function done() {
 
 function getTime(time) {
     var d = new Date(time * 1000);
-    return d.getHours() + '\"' + d.getMinutes() + '\":"' + d.getSeconds();
+    return d.getHours() + '\"' + d.getMinutes() + '\"' + d.getSeconds();
 }
 
 function buildTable(tableName, d) {
@@ -53,19 +53,25 @@ $('#form-submit').click(function (e) {
     var value = $('#f1').val();
     var corrency = $('#f2').val();
 
-    $.get(getForex(value, corrency), function (data) {
-        if (data.error) {
-            showError();
-        }
-
-        $('#r1').val((data.value).toFixed(2));
-    });
+    if (value) {
+        $.get(getForex(value, corrency), function (data) {
+            if (data.error) {
+                showError();
+            }
+            $('#r1').val((data.value).toFixed(2));
+        });
+    } else showError();
 });
 
 function showError() {
-    $('<strong>', {
-        text: "Please enter the corrent value",
-    }).appendTo('#error').fadeIn().delay(2000).fadeOut();
+    $('#r1').val("Please enter the corrent value").fadeIn()
+    setTimeout(function () {
+        $('#r1').val("");
+    }, 2000);
+
+    // $('<strong>', {
+    //     text: "Please enter the corrent value",
+    // }).appendTo('#error').fadeIn().delay(2000).fadeOut();
 }
 
 $('#now-submit').click(function () {
