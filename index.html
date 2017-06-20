@@ -11,63 +11,72 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/ribbon.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loader.css">
     <title>Forex For You</title>
 </head>
 
 <body>
-    <div class="row">
-        <div class="container">
-            <div class="col-sm-12">
-                <h1 class="greetings text-center"><strong>Forex For You!</strong></h1>
+    <div id="loader-container">
+        <!--<div class="loader" id="loader-2">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>-->
+
+    </div>
+    <main>
+        <div class="row">
+            <div class="container">
+                <div class="col-sm-12">
+
+                    <h1 class="greetings text-center"><strong>Forex For You!</strong></h1>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <button type="submit" class="btn btn-info text-center" id="now-submit"><strong>Convert Now</strong></button>
-    </div>
+        <div class="row">
+            <button type="submit" class="btn btn-info text-center" id="now-submit"><strong>Convert Now</strong></button>
+        </div>
 
 
-    <div class="row  menu" id="main-table">
-        <div class="container">
+        <div class="row  menu" id="main-table">
+            <div class="container">
+                <div class="col-sm-4">
+                    <div class="ribbon"><span>AUDUSD</span></div>
+                    <table class="table" id="table-AUDUSD">
+                        <tr>
+                            <th><span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                            </th>
+                            <th id="AUDUSD"></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <th>#</th>
+                            <th>Description</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Time</td>
+                            <td id="time-AUDUSD">50</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Price</td>
+                            <td id="price-AUDUSD">94</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Symbol</td>
+                            <td id="symbol-AUDUSD">80</td>
+                        </tr>
+                    </table>
+                </div>
 
-
-            <div class="col-sm-4">
-                <div class="ribbon"><span>AUDUSD</span></div>
-                <table class="table" id="table-AUDUSD">
-                    <tr>
-                        <th><span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-                        </th>
-                        <th id="AUDUSD"></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <th>#</th>
-                        <th>Description</th>
-                        <th>Value</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Time</td>
-                        <td id="time-AUDUSD">50</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Price</td>
-                        <td id="price-AUDUSD">94</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Symbol</td>
-                        <td id="symbol-AUDUSD">80</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="col-sm-4">
-                <div class="ribbon blue"><span>EURUSD</span></div>
-                <table class="table" id="table-EURUSD">
-                    <tr>
-                        <th><span class="glyphicon glyphicon-th" aria-hidden="true"></th>
+                <div class="col-sm-4">
+                    <div class="ribbon blue"><span>EURUSD</span></div>
+                    <table class="table" id="table-EURUSD">
+                        <tr>
+                            <th><span class="glyphicon glyphicon-th" aria-hidden="true"></th>
                         <th id="EURUSD"></th>
                         <th></th>
                     </tr>
@@ -96,9 +105,9 @@
 
             <div class="col-sm-4">
                 <div class="ribbon red"><span>GBPJPY</span></div>
-            <table class="table" id="table-GBPJPY">
-                <tr>
-                    <th><span class="glyphicon glyphicon-th" aria-hidden="true"></th>
+                <table class="table" id="table-GBPJPY">
+                    <tr>
+                        <th><span class="glyphicon glyphicon-th" aria-hidden="true"></th>
                         <th id="GBPJPY"></th>
                         <th></th>
                     </tr>
@@ -149,22 +158,20 @@
                             <button type="submit" class="btn btn-success" id="form-submit">Convert</button>
                             <span id="error"></span>
 
-                        </form>
-                        <form class="form">
-                            <div class="form-group">
-                                <div class="input-group">
-                                    <h3><strong>Result: </strong></h3>
-                                    <input type="text" class="form-control pull-right" id="r1" placeholder="result">
+                            </form>
+                            <form class="form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <h3><strong>Result: </strong></h3>
+                                        <input type="text" class="form-control pull-right" id="r1" placeholder="result">
 
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
 
+            </div>
         </div>
-    </div>
-    </div>
-    </div>
-    </div>
+    </main>
     <script src="js/main.js">
     </script>
 </body>
