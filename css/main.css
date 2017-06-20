@@ -1,3 +1,10 @@
+input,
+select,
+textarea {
+    color: black;
+    font-weight: 600;
+}
+
 root {
     --main-bg-color: rgba(55, 55, 55, 0.7);
 }
