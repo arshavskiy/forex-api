@@ -34,12 +34,13 @@ function done() {
 
 function getTime(time) {
     var d = new Date(time * 1000);
-    return d.getHours() + '\"' + d.getMinutes() + '\"' + d.getSeconds();
+    return d.getHours() + '\:' + d.getMinutes() + '\:' + d.getSeconds();
 }
 
 function buildTable(tableName, d) {
     var price = d.price.toFixed(3);
-    $(`#${tableName}`).text(d.symbol);
+
+    $(`#${tableName}`).text(d.symbol.slice(0, 3) + '/' + d.symbol.slice(3));
     $(`#time-${tableName}`).text(getTime(d.timestamp));
     $(`#price-${tableName}`).text(price).css("font-weight", "600");
     $(`#symbol-${tableName}`).text(d.symbol);
