@@ -3,7 +3,8 @@ function getForex(value, corrency) {
     url += '?' + $.param({
         'from': correncyVld(corrency)[0],
         'to': correncyVld(corrency)[1],
-        'quantity': value
+        'quantity': value,
+        'api_key': 'bdaRvuzmDNy8pOUQjbiXz5GN87CkiSCY'
     });
     return url;
 }
@@ -14,7 +15,7 @@ function correncyVld(val) {
 
 function getCorency() {
 
-    var url = 'https://forex.1forge.com/1.0.1/quotes?pairs=EURUSD,GBPJPY,AUDUSD';
+    var url = 'https://forex.1forge.com/1.0.1/quotes?pairs=EURUSD,GBPJPY,AUDUSD&api_key=bdaRvuzmDNy8pOUQjbiXz5GN87CkiSCY';
     $.ajax({
         url: url,
     }).done(function (data) {
