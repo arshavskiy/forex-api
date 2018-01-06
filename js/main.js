@@ -1,10 +1,5 @@
 (function () {
 
-    var init = (function () {
-        $('main').hide();
-        loader();
-        getCorency();
-    })();
 
     function loader() {
         $('#loader-container', {
@@ -15,25 +10,22 @@
             }).appendTo('#loader-container'),
         }).prependTo('body');
         $('<span>').appendTo('#loader-2');
-        $('<span>').appendTo('#loader-2');
-    };
+    }
 
-
-    function getForex(value, corrency) {
+    function getForex(value, currency) {
+        var currencyVld = (val) => val.split("/");
         var url = "https://forex.1forge.com/1.0.1/convert";
         url += '?' + $.param({
-            'from': correncyVld(corrency)[0],
-            'to': correncyVld(corrency)[1],
+            'from': currencyVld(currency)[0],
+            'to': currencyVld(currency)[1],
             'quantity': value,
             'api_key': 'bdaRvuzmDNy8pOUQjbiXz5GN87CkiSCY'
         });
         return url;
     }
-    var correncyVld = (val) => val.split("/");
 
 
     function getCorency() {
-
         var url = 'https://forex.1forge.com/1.0.1/quotes?pairs=EURUSD,GBPJPY,AUDUSD&api_key=bdaRvuzmDNy8pOUQjbiXz5GN87CkiSCY';
         $.ajax({
             url: url,
@@ -48,8 +40,7 @@
                 buildTable(data[i].symbol, data[i]);
             }
         });
-    };
-
+    }
 
     function getTime(time) {
         var d = new Date(time * 1000);
@@ -70,10 +61,10 @@
         e.preventDefault();
 
         var value = $('#f1').val();
-        var corrency = $('#f2').val();
+        var currency = $('#f2').val();
 
         if (value) {
-            $.get(getForex(value, corrency), function (data) {
+            $.get(getForex(value, currency), function (data) {
                 if (data.error) {
                     showError();
                 }
@@ -83,7 +74,7 @@
     });
 
     var showError = () => {
-        $('#r1').val("Please enter the corrent value").fadeIn()
+        $('#r1').val("Please enter the corrent value").fadeIn();
         setTimeout(function () {
             $('#r1').val("");
         }, 2000);
@@ -91,7 +82,11 @@
 
     $('#now-submit').click(function () {
         $('.jumbotron').toggle(200);
-    })
+    });
 
+
+    $('main').hide();
+    loader();
+    getCorency();
 
 }());
